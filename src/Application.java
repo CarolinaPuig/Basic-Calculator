@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.*;  
 class Application extends WindowAdapter implements ActionListener{ 
 
-	Frame f; 
+    Frame f; 
 	Label l1;
 	Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b0;
 	Button badd,bsub,bmult,bdiv,bmod,bcalc,bclr,bpts,bneg,bback;
@@ -48,7 +48,7 @@ class Application extends WindowAdapter implements ActionListener{
 		  badd.setBounds(260,340,50,50);
 		bsub=new Button("-");
 		  bsub.setBounds(260,270,50,50);
-		bmult=new Button("*");
+		bmult=new Button("X");
 		  bmult.setBounds(260,200,50,50);
 		bdiv=new Button("/");
 		  bdiv.setBounds(260,130,50,50);
@@ -95,6 +95,11 @@ class Application extends WindowAdapter implements ActionListener{
 		f.setLayout(null);  
 		f.setVisible(true);  
 		}
+
+    //close window
+    public void windowClosing(WindowEvent e) {
+        f.dispose();
+    }
 	
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
